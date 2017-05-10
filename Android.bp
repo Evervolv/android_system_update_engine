@@ -211,7 +211,15 @@ cc_defaults {
         "libfec",
         "liblz4",
         "libziparchive",
+        "libselinux",
     ],
+    product_variables: {
+        debuggable: {
+            cflags: [
+                "-DRUN_BACKUPTOOL",
+            ],
+        },
+    },
 }
 
 cc_defaults {
